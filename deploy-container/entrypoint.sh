@@ -6,6 +6,12 @@ PREFIX="deploy-code-server"
 
 mkdir -p $START_DIR
 
+# Setting git
+git config --global user.name "${GIT_USERNAME}"
+git config --global user.email "${GIT_EMAIL}"
+git config --global url."https://${GITHUB_USERNAME}:${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com".insteadOf "https://github.com"
+
+
 # function to clone the git repo or add a user's first file if no repo was specified.
 project_init () {
     [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo "Example file. Have questions? Join us at https://community.coder.com" > $START_DIR/coder.txt || git clone $GIT_REPO $START_DIR
@@ -94,6 +100,12 @@ if [ -n "$DOTFILES_REPO" ]; then
     # run install script, if it exists
     [ -f "$HOME/dotfiles/install.sh" ] && $HOME/dotfiles/install.sh
 fi
+
+# Setting up yarn
+npm install -g yarn
+cd $START_DIR
+yarn
+
 
 echo "[$PREFIX] Starting code-server..."
 # Now we can run code-server with the default entrypoint
