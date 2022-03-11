@@ -25,7 +25,7 @@ RUN code-server --install-extension RDebugger.r-debugger
 # Install R
 RUN sudo apt-get update
 # RUN sudo apt-get install -y r-base r-base-dev
-RUN sudo apt install --assume-yes --no-install-recommends build-essential libcurl4-openssl-dev libssl-dev libxml2-dev r-base libfontconfig1-dev
+RUN sudo apt install --assume-yes --no-install-recommends build-essential libcurl4-openssl-dev libssl-dev libxml2-dev r-base libfontconfig1-dev libcairo2-dev
 
 COPY init.R .local/share/code-server/User/init.R
 RUN sudo Rscript .local/share/code-server/User/init.R
