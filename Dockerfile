@@ -19,6 +19,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension 9j.amvim
 RUN code-server --install-extension Ikuyadeu.r
+RUN code-server --install-extension RDebugger.r-debugger
 
 
 # Install R
