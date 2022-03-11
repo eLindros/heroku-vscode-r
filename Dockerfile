@@ -30,7 +30,8 @@ RUN sudo apt-get install -y nodejs
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 RUN code-server --install-extension esbenp.prettier-vscode
 RUN code-server --install-extension svelte.svelte-vscode
-RUN code-server --install-extension vscodevim.vim
+RUN code-server --install-extension 9j.amvim
+RUN code-server --install-extension Ikuyadeu.r
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
