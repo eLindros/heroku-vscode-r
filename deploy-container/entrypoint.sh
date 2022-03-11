@@ -101,11 +101,6 @@ if [ -n "$DOTFILES_REPO" ]; then
     [ -f "$HOME/dotfiles/install.sh" ] && $HOME/dotfiles/install.sh
 fi
 
-# Setting up yarn
-npm install -g yarn
-cd $START_DIR
-yarn
-
 
 echo "[$PREFIX] Starting code-server..."
 # Now we can run code-server with the default entrypoint
