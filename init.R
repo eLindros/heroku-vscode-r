@@ -1,1 +1,1 @@
-helpers.installPackages("tidyverse")
+install.packages(c("languageserver", "tidyverse"))
