@@ -1,1 +1,1 @@
-install.packages(c("languageserver", "tidyverse"))
+install.packages(c("languageserver", "httpgd", "tidyverse"))
