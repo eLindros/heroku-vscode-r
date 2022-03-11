@@ -29,7 +29,7 @@ RUN code-server --install-extension Ikuyadeu.r
 
 # Install R
 RUN sudo apt-get update
-RUN sudo apt-get install r-base r-base-dev
+RUN sudo apt-get install -y r-base r-base-dev
 
 # -----------
 
