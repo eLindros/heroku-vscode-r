@@ -29,9 +29,8 @@ RUN code-server --install-extension Ikuyadeu.r
 
 # Install R
 RUN sudo apt-get update
-RUN sudo apt-get install -y r-base r-base-dev
-
-# -----------
+# RUN sudo apt-get install -y r-base r-base-dev
+RUN sudo apt install --assume-yes --no-install-recommends build-essential libcurl4-openssl-dev libssl-dev libxml2-dev r-base
 
 # Port
 ENV PORT=8080
